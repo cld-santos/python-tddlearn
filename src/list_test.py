@@ -20,6 +20,19 @@ class list_test(unittest.TestCase):
         self.assertTrue(''.join(wow) == "caraka")
         wow.pop()
         self.assertTrue(''.join(wow) == "cara")
+
+    def test_list_bidimensionais(self):
+        wow = [[1,2,3],[2,3,4]]
+        for item in wow:
+            self.assertTrue(len(item) == 3)
+            for subitem in item:
+                print(subitem)
+
+
+    def test_list_are_mutable(self):
+        wow = ['1',2,'3','4']
+        wow[1] = "lalala"
+        self.assertTrue(''.join(wow) == "1lalala34")
         
 if __name__ == "__main__":
     unittest.main()
