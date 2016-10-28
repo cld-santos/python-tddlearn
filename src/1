@@ -1,7 +1,5 @@
 import unittest
-from Montadora.Carro import Automovel
-from Montadora.TipoCarro import Cabritao
-from Montadora.TipoCarro import Esportivo
+from  Montadora import Automovel, Cabritao, Esportivo
 
 class object_test(unittest.TestCase):
     def test_limpando_a_bunda_na_pia(self):

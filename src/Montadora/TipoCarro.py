@@ -1,12 +1,4 @@
-class Automovel:
-    _marca = ""
-    _tipo = ""
-
-    def __init__(self, marca, tipo):
-        self._marca = marca
-        self._tipo = tipo
-    def get_marca(self):
-        return self._marca
+from Carro import Automovel
 
 class Cabritao(Automovel):
     def __init__(self,marca):
@@ -19,4 +11,5 @@ class Esportivo(Automovel):
     @property
     def tipo(self):
         return self._tipo
+
 
