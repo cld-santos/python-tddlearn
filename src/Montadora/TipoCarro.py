@@ -1,4 +1,5 @@
-from Carro import Automovel
+from Montadora.Carro import Automovel
+
 
 class Cabritao(Automovel):
     def __init__(self,marca):
