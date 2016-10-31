@@ -33,7 +33,7 @@ class object_test(unittest.TestCase):
 
         _amstel = Engradado()
 
-        self.assertTrue(_kaiser.brejas() == _amstel.brejas())
+        self.assertTrue(_kaiser.brejas() == _amstel.brejas()) #nunca isso pode ser igual
 
 if __name__ == "__main__":
     unittest.main()
