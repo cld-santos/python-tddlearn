@@ -12,10 +12,20 @@ class template_test(unittest.TestCase):
         self.assertTrue(_template.render(_context) == "Simple replacement Claudio Santos.")
 
     def test_render_a_file_template(self):
-        _engine = Engine(dirs='templates/')
-        _template = _engine.get_template('/home/ubuntu/src/template/base.html')
+        _engine = Engine(dirs=['/home/ubuntu/src/template/'])
+        _template = _engine.get_template('base.html')
         _context = Context({'name': 'Claudio Santos', 'biograph':'programmer ancious to learn python'})
         self.assertTrue(_template.render(_context)=="<html><body>Meu Nome é Claudio Santos e sou programmer ancious to learn python</body></html>\n")
+
+    def test_render_a_file_based_on_template(self):
+        _engine = Engine(dirs=['/home/ubuntu/src/template/'])
+        _template = _engine.get_template('my-bio.html')
+        _context = Context({'profile': [
+            {'company': 'CGI', 'experience':'arcobjects programmer'},
+            {'company': 'Sigma', 'experience':'GIS Open source programmer'}
+        ]})
+        self.assertTrue(_template.render(_context).replace("\n",'')=='<html><head>    <title>  Claudio Santos  </title></head><body>        <h2> CGI </h2>    <p> arcobjects programmer </p>    <h2> Sigma </h2>    <p> GIS Open source programmer </p></body></html>')
+
 
 if __name__ == "__main__":
     import django

@@ -1,0 +1,12 @@
+{% extends "main.html" %}
+
+{% block title %} Claudio Santos {% endblock %}
+
+{% block sidebar %}
+{% for item in profile %}
+    <h2> {{ item.company }} </h2>
+    <p> {{ item.experience }} </p>
+{% endfor %}
+{% endblock %}
+
+
