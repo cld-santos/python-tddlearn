@@ -1,14 +1,16 @@
 import unittest
-from unittest.mock import Mock 
+from unittest.mock import Mock
 from util.EventOriented import Event
 
+
 class Estoque(Event):
+
     def __init__(self):
         self._products = []
         super(Estoque, self).__init__()
 
     def BaixarEstoque(self):
-        self.emit("estoque-baixado",self._products)
+        self.emit("estoque-baixado", self._products)
 
     def EntrarProduto(self):
         self.emit("produto-adicionado")
@@ -21,8 +23,7 @@ class test_Events(unittest.TestCase):
 
     def test_emitir_evento(self):
 
-        _products = [{'prod_id':11}]
-        
+        _products = [{'prod_id': 11}]
         _estoque_baixou = Mock()
         _produto_entrou = Mock()
 
@@ -30,7 +31,7 @@ class test_Events(unittest.TestCase):
         _meu_estoque.set_product(_products[0])
         _meu_estoque.on("estoque-baixado", _estoque_baixou)
         _meu_estoque.on("produto-adicionado", _produto_entrou)
-        
+
         _meu_estoque.BaixarEstoque()
         self.assertTrue(_estoque_baixou.called)
         _estoque_baixou.assert_called_with(_products)
@@ -38,10 +39,9 @@ class test_Events(unittest.TestCase):
         self.assertFalse(_produto_entrou.called)
 
     def test_remover_evento(self):
-        _products = [{'prod_id':1100}]
+        _products = [{'prod_id': 1100}]
 
         _estoque_baixou = Mock()
-
 
         meu_estoque = Estoque()
         meu_estoque.set_product(_products[0])
@@ -53,7 +53,7 @@ class test_Events(unittest.TestCase):
         _estoque_baixou.assert_called_with(_products)
 
         meu_estoque.off("estoque-baixado", _estoque_baixou)
-        
+
         _estoque_baixou.reset_mock()
         meu_estoque.BaixarEstoque()
 
