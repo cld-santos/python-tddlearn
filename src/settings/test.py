@@ -6,4 +6,3 @@ SECRET_KEY = 'local'
 # Test runner with no database creation
 DEBUG = True
 
-TEST_RUNNER = 'tests.config.testrunner.NoDbTestRunner'
