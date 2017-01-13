@@ -11,3 +11,10 @@ class UrlTestCase(SimpleTestCase):
         resp = con.getresponse()
         self.assertEqual(resp.read().decode(), "Hello World!")
         con.close()
+
+    def test_access_url_param_url(self):
+        con = http.client.HTTPConnection('localhost:8000')
+        con.request('GET', '/lalala/lululu/')
+        resp = con.getresponse()
+        self.assertEqual(resp.read().decode(), "Post lululu da lalala.")
+        con.close()
