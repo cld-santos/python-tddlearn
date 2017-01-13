@@ -7,5 +7,6 @@ $ cd python-tddlearn
 $ vagrant up
 $ vagrant ssh
 $ python3 -m unittest discover -s src/ -v -p '*_test.py'
+$ cd src
 $ python3 manage.py test
 ```

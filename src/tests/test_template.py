@@ -5,11 +5,6 @@ from django.test import SimpleTestCase
 
 class TemplateTestCase(SimpleTestCase):
 
-    # @classmethod
-    # def setUpClass(cls):
-    #     settings.configure(DEBUG=True)
-    #     django.setup()
-
     def test_render_a_variable_template(self):
         _engine = Engine()
         _template = _engine.from_string("Simple replacement {{ target }}.")
@@ -32,14 +27,5 @@ class TemplateTestCase(SimpleTestCase):
         self.assertTrue(_template.render(_context).replace("\n", '') == '<html><head>    <title>  Claudio Santos  </title></head><body>        <h2> CGI </h2>    <p> arcobjects programmer </p>    <h2> Sigma </h2>    <p> GIS Open source programmer </p></body></html>')
 
 
-# def setUpModule():
-#     print('executou')
-#     settings.configure(DEBUG=True)
-#     django.setup()
-
-
 if __name__ == "__main__":
     pass
-    # settings.configure(DEBUG=True)
-    # django.setup()
-    # unittest.main()
