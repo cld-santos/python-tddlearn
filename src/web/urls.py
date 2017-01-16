@@ -2,19 +2,16 @@
 from django.conf.urls import url
 from django.http import HttpResponse
 
-urlpatterns = None
+urlpatterns = []
 
 
 class Urls(object):
 
     def setup_urls(self):
         global urlpatterns
-        # urlpatterns.append(url(r'^(?P<categoria>[a-z]+)/(?P<post>[a-z]+)/$', self.parametrized_url))
-        # urlpatterns.append(url(r'^$', self.index))
-        urlpatterns = (
-            url(r'^(?P<categoria>[a-z]+)/(?P<post>[a-z]+)/$', self.parametrized_url, name='parametrized_url'),
-            url(r'^$', self.index, name='index'),
-        )
+        urlpatterns.append(url(r'^(?P<categoria>[a-z]+)/(?P<post>[a-z]+)/$',
+                               self.parametrized_url))
+        urlpatterns.append(url(r'^$', self.index))
 
     def index(self, request):
         return HttpResponse("Hello World!")
