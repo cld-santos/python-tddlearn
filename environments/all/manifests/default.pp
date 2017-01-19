@@ -117,13 +117,6 @@ package {'gunicorn':
         require => Package["python3-pip"],
 }
 
-package {'pillow':
-        provider => pip3,
-        ensure => '2.9.0',
-        name => "Pillow",
-        require => Package["python3-pip"],
-}
-
 package {'psycopg2':
         provider => pip3,
         ensure => '2.6.1',
