@@ -1,10 +1,10 @@
-https://github.com/cld-santos/python-tddlearn
+
 
 ## Principis motivadores
     - Compartilhamento de conhecimento
     - "Quem ensina aprende ao ensinar" Paulo Freire
 
-## Python TDDLearn
+## Python TDDLearn (link github)[https://github.com/cld-santos/python-tddlearn]
     Aprendizagem guiada por testes.
 
 ## Meus 50 cents sobre django.
