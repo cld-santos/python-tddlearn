@@ -89,7 +89,7 @@
   INSTALLED_APPS = (
       'hands_on'
   )
-```
+  ```
 3. Construa um modelo simples de autor
 4. Construa um modelo de posts com uma foreign key 
 5. Execute o makemigrations
