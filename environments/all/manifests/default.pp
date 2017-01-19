@@ -64,9 +64,20 @@ service{ "postgresql":
 exec{ "set-postgres-password":
     command => "/usr/bin/psql -c \"alter user postgres with password \'postgres\';\"",
     user => "postgres",
-        require => Service["postgresql"],
+    require => Service["postgresql"],
 }
 
+exec{ "create database python_tddlearn":
+    command => "/usr/bin/psql -c \"CREATE DATABASE python_tddlearn;\"",
+    user => "postgres",
+    require => Service["postgresql"],
+}
+
+exec{ "create database python_tddlearn":
+    command => "/usr/bin/psql -c \"CREATE DATABASE hands_on;\"",
+    user => "postgres",
+    require => Service["postgresql"],
+}
 
 file{"/etc/postgresql/9.6/main/pg_hba.conf":
         source => "/vagrant/environments/all/conf/pg_hba.conf",
