@@ -18,7 +18,7 @@ Desta forma se eu quero validar uma caracteristica específica de um recurso da 
 **Temporáriamente o código do hands_on está neste repositório, enquanto não disponibilizamos o repositório oficial do chat do caos**
 
 
-(**Link apresentação**)[https://youtu.be/G2IK3oAnXS0]
+[**Link apresentação**](https://youtu.be/G2IK3oAnXS0)
 
 
 
