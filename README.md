@@ -32,12 +32,12 @@ $ vagrant provision
 $ vagrant ssh
 ```
 
-Para testar o código puramente python:
+ - Para testar o código puramente python:
 ``` bash
 $ python3 -m unittest discover -s src/ -v -p '*_test.py'
 ```
 
-Para testar o código com django
+ - Para testar o código com django
 ``` bash
 $ cd src
 $ python3 manage.py runserver 0.0.0.0:8000
