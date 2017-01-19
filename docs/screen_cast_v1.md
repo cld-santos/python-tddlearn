@@ -4,15 +4,15 @@
     - Compartilhamento de conhecimento
     - "Quem ensina aprende ao ensinar" Paulo Freire
 
-## Python TDDLearn (link github)[https://github.com/cld-santos/python-tddlearn]
+## Python TDDLearn [link github](https://github.com/cld-santos/python-tddlearn)
     Aprendizagem guiada por testes.
 
 ## Meus 50 cents sobre django.
 
     É importante entender algumas coisas do mundo python antes iniciar no django:
-     - Python Enhancement Proposal: se é necessário uma evolução no python saporra é feita por meio de uma pep, porém há (peps de padrão de escrita de código)[https://www.python.org/dev/peps/pep-0008/], (padrão para um webserver)[https://www.python.org/dev/peps/pep-0333/] e etc.
+     - Python Enhancement Proposal: se é necessário uma evolução no python saporra é feita por meio de uma pep, porém há peps de [padrão de escrita de código](https://www.python.org/dev/peps/pep-0008/), [padrão para um webserver](https://www.python.org/dev/peps/pep-0333/) e etc.
      - PIP python package index, gestor de depências do python
-     - Python é (strong, dynamic typed)[https://wiki.python.org/moin/Why%20is%20Python%20a%20dynamic%20language%20and%20also%20a%20strongly%20typed%20language];
+     - Python é [strong, dynamic typed](https://wiki.python.org/moin/Why%20is%20Python%20a%20dynamic%20language%20and%20also%20a%20strongly%20typed%20language);
      - Python tem aspectos funcionais como first class function, lambdas;
      - Python é orientada a objetos
      - Python permite herança multipla
