@@ -14,7 +14,6 @@ Vagrant.configure("2") do |config|
   # config.vm.network "public_network"
 
   config.vm.synced_folder "src/", "/home/ubuntu/src/"
-  config.vm.synced_folder "hands_on/", "/home/ubuntu/hands_on/"
 
   # config.vm.provider "virtualbox" do |vb|
   #   # Display the VirtualBox GUI when booting the machine
