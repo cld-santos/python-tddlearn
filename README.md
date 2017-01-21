@@ -15,12 +15,6 @@ Desta forma se eu quero validar uma caracteristica específica de um recurso da 
         self.assertTrue(me[5:9] == "emas")
 ```
 
-**Temporáriamente o código do hands_on está neste repositório, enquanto não disponibilizamos o repositório oficial do chat do caos**
-
-
-[**Link apresentação**](https://youtu.be/G2IK3oAnXS0)
-
-
 
  - Start do ambiente:
 ``` bash
