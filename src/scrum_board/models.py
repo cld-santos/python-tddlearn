@@ -8,7 +8,7 @@ class User(models.Model):
 class Card(models.Model):
     title = models.CharField(max_length=100)
     description = models.CharField(max_length=500)
-    owner = models.ForeignKey(User, verbose_name=('User'))
+    owner = models.ForeignKey(User, verbose_name=('User'), on_delete=models.CASCADE)
     created_date = models.DateField(blank=True, null=True)
 
 
