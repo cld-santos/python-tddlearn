@@ -6,7 +6,7 @@ class tuples_test(unittest.TestCase):
         yeah = 1, 2, 3, 4
         self.assertTrue(len(yeah) == 4)
 
-    def test_se_append_tuples(self):
+    def test_append_tuples(self):
         yeah = (1, 2, 3, 4)
         error = False
         try:
@@ -14,10 +14,9 @@ class tuples_test(unittest.TestCase):
         except:
             error = True
 
-        if not error:
-            self.fail("Append em tuple deveria estourar erro!")
+        self.assertTrue(error)
 
-    def test_se_tuples_sao_mutaveis(self):
+    def test_tuples_imutaveis(self):
         yeah = (1, 2, 3, 4)
         error = False
 
@@ -26,9 +25,7 @@ class tuples_test(unittest.TestCase):
         except:
             error = True
 
-        if not error:
-            self.fail("Eita... tuplas são imutaveis! isso não deveria ter ocorrido")
-
+        self.assertTrue(error)
 
 if __name__ == "__main__":
     unittest.main()
