@@ -15,10 +15,14 @@ Desta forma se eu quero validar uma caracteristica específica de um recurso da 
         self.assertTrue(me[5:9] == "emas")
 ```
 
+ - Pipenv shell
+``` bash
+$ pipenv shell
+```
 
  - Para testar o código puramente python:
 ``` bash
-$ python3 -m unittest discover -s src/ -v -p '*_test.py'
+$ python -m unittest discover -s src/ -v -p '*_test.py'
 ```
 
  - Para testar o código com django
@@ -27,8 +31,8 @@ $ python3 -m unittest discover -s src/ -v -p '*_test.py'
 $ export DJANGO_SETTINGS_MODULE=settings.test
 $ export PYTHONPATH=$PYTHONPATH:$PWD
 $ cd src
-$ python3 manage.py runserver 0.0.0.0:8000
-$ python3 manage.py test
+$ python manage.py runserver 0.0.0.0:8000
+$ python manage.py test
 ```
 
 
