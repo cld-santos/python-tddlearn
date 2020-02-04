@@ -27,5 +27,11 @@ class tuples_test(unittest.TestCase):
 
         self.assertTrue(error)
 
+    def test_pack_unpacking(self):
+        pack = 1, 2, 'a', 'b'
+        x, y, w, z = pack
+        self.assertEqual(y, pack[1])
+        self.assertEqual(z, pack[3])
+
 if __name__ == "__main__":
     unittest.main()

@@ -35,6 +35,10 @@ class list_test(unittest.TestCase):
         wow[1] = "lalala"
         self.assertTrue(''.join(wow) == "1lalala34")
 
+    def test_delete_a_range(self):
+        wow = [1, 2, 3, 4]
+        del wow[1:3]
+        self.assertEqual(wow, [1, 4])
 
 if __name__ == "__main__":
     unittest.main()

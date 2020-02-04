@@ -3,6 +3,7 @@ from unittest.mock import Mock
 
 
 class Event:
+    """Event class is a publish subscriber class."""
 
     def __init__(self):
         self._events = {}
@@ -15,13 +16,13 @@ class Event:
     def off(self, name, action):
         self._events[name].remove(action)
 
-
     def emit(self, name, paramns):
         for _item in self._events[name]:
             _item(paramns)
 
 
 class Estoque(Event):
+    """Simulates a Storage class that uses an event to notice subscribers about changes."""
 
     def __init__(self):
         self._products = []

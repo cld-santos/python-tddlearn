@@ -5,6 +5,7 @@ class sets_test(unittest.TestCase):
     def test_criando_sets(self):
         yeah = {1, 2, 3, 4, 4}
         self.assertTrue(len(yeah) == 4)
+        self.assertEqual(yeah, {1, 2, 3, 4})
 
     def test_if_append_set(self):
         yeah = {1, 2, 3, 4}
@@ -16,8 +17,8 @@ class sets_test(unittest.TestCase):
 
         self.assertTrue(error)
 
-    def test_se_sets_sao_mutaveis(self):
-        #Tuplas sao mutaveis, Sets que nao sao.
+    def test_sets_nao_sao_mutaveis(self):
+        """Sets nao sao mutaveis."""
         yeah = {1, 2, 3, 4}
         error = False
         try:
