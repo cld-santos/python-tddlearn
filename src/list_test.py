@@ -28,7 +28,7 @@ class list_test(unittest.TestCase):
         for item in wow:
             self.assertTrue(len(item) == 3)
             for subitem in item:
-                print(subitem)
+                pass
 
     def test_list_are_mutable(self):
         wow = ['1', 2, '3', '4']
